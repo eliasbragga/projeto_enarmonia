@@ -3,7 +3,10 @@ function enviar() {
     var res = window.document.getElementById('res')
     var resultado = String(txt.value) 
     var resu = resultado[0]?.toUpperCase() + resultado?.substring(1)
-    
+    txt.value = ''
+    setTimeout(() => {
+        res.innerHTML = 'Resultado'
+    }, 7000)
     res.innerHTML = `A nota que você digitou foi ${resu}.`
     if (resu == 'C#' ){
         res.innerHTML += ` No entando, a nota enarmônica de ${resu} é Db`
